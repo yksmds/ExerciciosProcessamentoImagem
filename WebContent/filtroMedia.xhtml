@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" lang="pt-br">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Trabalho 1 de PI</title>
+
+	<link href="../resources/styles/stylesheet.css" rel="stylesheet"
+		type="text/css" />
+	<link href="../resources/styles/estilo_yks.css" rel="stylesheet"
+		type="text/css" />
+
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/resources/bootstrap/bootstrap.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/resources/styles/sobrescreve.css" />
+
+	<style>
+.alert.alert-warning {
+	padding: 7px;
+}
+</style>
+</h:head>
+<h:body>
+	<div class="container" style="margin-top: 5em;">
+		<h:form id="form" prependId="false">
+			<p:growl id="growl" life="9000" showDetail="true" />
+			<div class="row">
+				<div class="col-md-3">
+					<div class="row">
+						<p:commandLink actionListener="#{filtroMedia.filtroMedia()}"
+							value="Vizinho Próximo Redução" update="growl :vpreducao"
+							styleClass="btn btn-info" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/vaso1.jpg" id="antiga" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/filtroMedia.png"
+							id="vpreducao" />
+					</div>
+				</div>
+			</div>
+
+		</h:form>
+	</div>
+</h:body>
+</html>

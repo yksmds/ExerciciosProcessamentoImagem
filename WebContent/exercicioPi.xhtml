@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" lang="pt-br">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Trabalho 1 de PI</title>
+
+	<link href="../resources/styles/stylesheet.css" rel="stylesheet"
+		type="text/css" />
+	<link href="../resources/styles/estilo_yks.css" rel="stylesheet"
+		type="text/css" />
+
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/resources/bootstrap/bootstrap.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/resources/styles/sobrescreve.css" />
+
+	<style>
+.alert.alert-warning {
+	padding: 7px;
+}
+</style>
+</h:head>
+<h:body>
+	<div class="container" style="margin-top: 5em;">
+		<h:form id="form" prependId="false">
+			<p:growl id="growl" life="9000" showDetail="true" />
+			<div class="row">
+				<div class="col-md-10">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="row">
+						<p:commandLink actionListener="#{beanFoto.vpReducao}"
+							value="Vizinho Próximo Redução" update="growl :vpreducao"
+							styleClass="btn btn-info" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/animal.png" id="antiga" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/vpReducao.png"
+							id="vpreducao" />
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="row">
+						<p:commandLink actionListener="#{beanFoto.vpAmpliacao}"
+							value="Vizinho Próximo Ampliação" update="growl :vpAmpliacao"
+							styleClass="btn btn-info" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/cachorro2.png"/>
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/vpAmpliacao.png" id="vpAmpliacao" />
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="row">
+						<p:commandLink actionListener="#{beanFoto.bilinearReducao}"
+							value="Bilinear Redução" update="growl :bilinearReducao"
+							styleClass="btn btn-info" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/cachorro1.png" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/bilinearReducao.png" id="bilinearReducao" />
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="row">
+						<p:commandLink actionListener="#{beanFoto.bilinearAmpliacao}"
+							value="Bilinear Ampliação" update="growl :bilinearAmpliacao"
+							styleClass="btn btn-info" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/leao.jpg" />
+					</div>
+					<div class="row" style="margin-top: 1em;">
+						<p:graphicImage value="../resources/images/bilinearReducao.jpg" id="bilinearAmpliacao" />
+					</div>
+				</div>
+			</div>
+
+		</h:form>
+	</div>
+</h:body>
+</html>
